@@ -4,11 +4,19 @@
   "description": "Website building project",
   "type": "module",
   "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
     "serve": "node serve.mjs",
     "screenshot": "node screenshot.mjs"
   },
   "dependencies": {
-    "puppeteer": "^21.0.0"
+    "puppeteer": "^21.0.0",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.0.1",
+    "vite": "^8.0.10"
+  }
 }
