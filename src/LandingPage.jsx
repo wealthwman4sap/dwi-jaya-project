@@ -70,7 +70,7 @@ function Nav() {
   useEffect(()=>{if(!navDrop&&!ctaOpen)return;const h=()=>{setNavDrop(null);setCtaOpen(false)};window.addEventListener("click",h);return()=>window.removeEventListener("click",h)},[navDrop,ctaOpen]);
   const goTo=(id)=>{const el=document.getElementById(id);if(el){el.scrollIntoView({behavior:"smooth",block:"start"});setNavDrop(null)}};
   const lk=[
-    {l:"Produk",key:"produk",items:[
+    {l:"Layanan",key:"produk",items:[
       {icon:"🏷️",label:"Custom Lanyard",desc:"Lanyard tali + ID card holder",target:"layanan"},
       {icon:"🪪",label:"ID Card & Kartu",desc:"Kartu nama, member card",target:"layanan"},
       {icon:"🎁",label:"Merchandise",desc:"Wristband, keychain, dll",target:"layanan"},
@@ -307,8 +307,8 @@ var PROD_IMG_10 = "https://drive.google.com/thumbnail?id=1pgCbVmg2nJ9HZxHNP3jHNW
   return <section id="layanan" style={{background:C.lt,padding:"100px 24px"}}>
     <div style={{maxWidth:1200,margin:"0 auto"}}>
       <div style={{textAlign:"center",marginBottom:48}}>
-        <span style={{display:"inline-block",fontSize:12,fontWeight:700,color:C.pri,letterSpacing:".1em",textTransform:"uppercase",background:C.pri+"10",padding:"6px 16px",borderRadius:100,marginBottom:16}}>Produk</span>
-        <h2 style={{fontFamily:"'Sora',system-ui,sans-serif",fontSize:"clamp(28px,4vw,42px)",fontWeight:800,color:C.dk,letterSpacing:"-.02em",lineHeight:1.15}}>Produk kami</h2>
+        <span style={{display:"inline-block",fontSize:12,fontWeight:700,color:C.pri,letterSpacing:".1em",textTransform:"uppercase",background:C.pri+"10",padding:"6px 16px",borderRadius:100,marginBottom:16}}>Layanan</span>
+        <h2 style={{fontFamily:"'Sora',system-ui,sans-serif",fontSize:"clamp(28px,4vw,42px)",fontWeight:800,color:C.dk,letterSpacing:"-.02em",lineHeight:1.15}}>Layanan kami</h2>
         <p style={{fontSize:16,color:C.mu,marginTop:12,maxWidth:620,margin:"12px auto 0"}}>Lebih dari 2 dekade pengalaman cetak, kini dilengkapi custom lanyard & merchandise</p>
       </div>
       <div style={{display:"flex",justifyContent:"center",gap:8,marginBottom:48,flexWrap:"wrap"}}>{cats.map(function(c){return <button key={c.id} className="tab-b" onClick={function(){setAt(c.id)}} style={{padding:"10px 22px",borderRadius:100,fontSize:14,fontWeight:600,fontFamily:"'Sora',system-ui,sans-serif",background:at===c.id?C.pri:C.lt,color:at===c.id?"#fff":C.dk,border:at===c.id?"none":"1px solid "+C.sfD,cursor:"pointer"}}>{c.l}</button>})}</div>
@@ -519,7 +519,7 @@ function Footer() {
           <p style={{fontSize:13,color:"rgba(255,255,255,.4)",lineHeight:1.6}}>Vendor print tugas dan custom merchandise terpercaya untuk mahasiswa, instansi, dan event.</p>
         </div>
         <div>
-          <h4 style={{fontSize:12,fontWeight:700,color:"rgba(255,255,255,.5)",letterSpacing:".08em",textTransform:"uppercase",marginBottom:16}}>Produk</h4>
+          <h4 style={{fontSize:12,fontWeight:700,color:"rgba(255,255,255,.5)",letterSpacing:".08em",textTransform:"uppercase",marginBottom:16}}>Layanan</h4>
           {["ID Card","Lanyard","Keychain","Wristband","Print & Fotocopy","Jilid Dokumen","Laminating","Stationery / ATK"].map(function(s,i){return <p key={i} style={{fontSize:13,color:"rgba(255,255,255,.35)",marginBottom:8}}>{s}</p>})}
         </div>
         <div>
