@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+﻿import { useState, useEffect } from "react";
 
 const BRAND_MAIN = "DWI JAYA";
 const BRAND_SUB = "Project";
@@ -435,7 +435,10 @@ function Heritage() {
               <div style={{fontSize:12,fontWeight:700,color:C.acc,letterSpacing:".08em",textTransform:"uppercase",marginBottom:8}}>Jam Operasional</div>
               <p style={{fontSize:14,color:"rgba(255,255,255,.7)",lineHeight:1.7}}>Senin – Jumat · 07.00 – 21.00<br/>Sabtu · 07.00 – 17.00</p>
             </div>
-            <a href={MAPS_LINK} target="_blank" rel="noopener" style={{marginTop:"auto",display:"inline-flex",alignItems:"center",justifyContent:"center",gap:8,background:C.acc,color:C.dk,padding:"12px 24px",borderRadius:10,textDecoration:"none",fontSize:14,fontWeight:700}}>Buka di Google Maps →</a>
+            <div style={{borderRadius:10,overflow:"hidden",flexGrow:1,minHeight:160}}>
+              <iframe src="https://maps.google.com/maps?q=Jl.+Medokan+Sawah+No.+18,+Surabaya&output=embed&hl=id" width="100%" height="100%" style={{border:0,display:"block",minHeight:160}} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"/>
+            </div>
+            <a href={MAPS_LINK} target="_blank" rel="noopener" style={{display:"inline-flex",alignItems:"center",justifyContent:"center",gap:8,background:C.acc,color:C.dk,padding:"12px 24px",borderRadius:10,textDecoration:"none",fontSize:14,fontWeight:700}}>Buka di Google Maps →</a>
           </div>
         </div>
       </div>
