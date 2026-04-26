@@ -189,9 +189,9 @@ var PARTNER_ROW3 = [
 
 
 function SocialProof() {
-  var r1=PARTNER_ROW1.concat(PARTNER_ROW1).concat(PARTNER_ROW1).concat(PARTNER_ROW1);
-  var r2=PARTNER_ROW2.concat(PARTNER_ROW2).concat(PARTNER_ROW2).concat(PARTNER_ROW2);
-  var r3=PARTNER_ROW3.concat(PARTNER_ROW3).concat(PARTNER_ROW3).concat(PARTNER_ROW3);
+  var r1=PARTNER_ROW1.concat(PARTNER_ROW1).concat(PARTNER_ROW1).concat(PARTNER_ROW1).concat(PARTNER_ROW1).concat(PARTNER_ROW1).concat(PARTNER_ROW1).concat(PARTNER_ROW1);
+  var r2=PARTNER_ROW2.concat(PARTNER_ROW2).concat(PARTNER_ROW2).concat(PARTNER_ROW2).concat(PARTNER_ROW2).concat(PARTNER_ROW2).concat(PARTNER_ROW2).concat(PARTNER_ROW2);
+  var r3=PARTNER_ROW3.concat(PARTNER_ROW3).concat(PARTNER_ROW3).concat(PARTNER_ROW3).concat(PARTNER_ROW3).concat(PARTNER_ROW3).concat(PARTNER_ROW3).concat(PARTNER_ROW3);
   var maskStyle={overflow:"hidden"};
   return <section style={{background:C.lt,padding:"48px 0 40px",borderBottom:"1px solid "+C.sfD}}>
     <div style={{maxWidth:1200,margin:"0 auto 28px",padding:"0 24px",textAlign:"center"}}>
