@@ -436,7 +436,7 @@ function Heritage() {
               <p style={{fontSize:14,color:"rgba(255,255,255,.7)",lineHeight:1.7}}>Senin – Jumat · 07.00 – 21.00<br/>Sabtu · 07.00 – 17.00</p>
             </div>
             <div style={{borderRadius:10,overflow:"hidden",flexGrow:1,minHeight:160}}>
-              <iframe src="https://maps.google.com/maps?q=Jl.+Medokan+Sawah+No.+18,+Surabaya&output=embed&hl=id" width="100%" height="100%" style={{border:0,display:"block",minHeight:160}} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"/>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.185875871566!2d112.7909288747611!3d-7.33301079267539!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7faba24dae409%3A0x695f8fe0995b17ef!2sDwi%20Jaya%20Foto%20Copy!5e0!3m2!1sen!2sid!4v1777178104745!5m2!1sen!2sid" width="100%" height="100%" style={{border:0,display:"block",minHeight:160}} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"/>
             </div>
             <a href={MAPS_LINK} target="_blank" rel="noopener" style={{display:"inline-flex",alignItems:"center",justifyContent:"center",gap:8,background:C.acc,color:C.dk,padding:"12px 24px",borderRadius:10,textDecoration:"none",fontSize:14,fontWeight:700}}>Buka di Google Maps →</a>
           </div>
