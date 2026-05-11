@@ -82,7 +82,7 @@ function Nav() {
   ];
   var ddStyle={position:"absolute",top:"calc(100% + 8px)",left:0,background:"#fff",borderRadius:12,boxShadow:"0 12px 40px rgba(0,0,0,.12)",padding:8,minWidth:260,animation:"slideUp .2s ease",border:"1px solid "+C.sfD,zIndex:10};
   var ddItemStyle={display:"flex",alignItems:"center",gap:12,padding:"10px 12px",borderRadius:8,textDecoration:"none",cursor:"pointer",border:"none",background:"transparent",width:"100%",textAlign:"left"};
-  return <nav style={{position:"fixed",top:56,left:0,right:0,zIndex:1000,background:sc?"rgba(255,255,255,.95)":"transparent",backdropFilter:sc?"blur(12px)":"none",borderBottom:sc?"1px solid rgba(0,0,0,.06)":"none",transition:"all .3s",padding:sc?"10px 0":"18px 0"}}>
+  return <nav style={{position:"fixed",top:0,left:0,right:0,zIndex:1000,background:sc?"rgba(255,255,255,.95)":"transparent",backdropFilter:sc?"blur(12px)":"none",borderBottom:sc?"1px solid rgba(0,0,0,.06)":"none",transition:"all .3s",padding:sc?"10px 0":"18px 0"}}>
     <div style={{maxWidth:1200,margin:"0 auto",padding:"0 24px",display:"flex",alignItems:"center",justifyContent:"space-between"}}>
       <a href="#" style={{textDecoration:"none"}}><Logo dark={sc} sz={38}/></a>
       <div style={{display:"flex",alignItems:"center",gap:32}}>
@@ -344,9 +344,21 @@ var PROD_IMG_10 = "https://drive.google.com/thumbnail?id=1pgCbVmg2nJ9HZxHNP3jHNW
 }
 
 function TopBanner() {
-  return <div style={{position:"fixed",top:0,left:0,right:0,zIndex:1001,background:"linear-gradient(135deg,"+C.pri+" 0%,#1a3a6e 100%)",padding:"10px 24px",textAlign:"center",display:"flex",alignItems:"center",justifyContent:"center",gap:16,flexWrap:"wrap"}}>
-    <p style={{fontSize:13,fontWeight:700,color:"#fff",margin:0}}>{"⚡ DISKON KHUSUS SPONSORSHIP EVENT ⚡"} <span style={{fontWeight:400,opacity:.85}}>Butuh lanyard untuk event organisasi atau komunitas? Kami kasih special price — semakin banyak order semakin murah!</span></p>
-    <a href={WA_LANYARD} target="_blank" rel="noopener" style={{flexShrink:0,display:"inline-flex",alignItems:"center",gap:6,background:C.acc,color:C.dk,padding:"6px 16px",borderRadius:8,textDecoration:"none",fontSize:12,fontWeight:700,whiteSpace:"nowrap"}}><WaIcon s={12} c={C.dk}/>Chat Sekarang</a>
+  var _s=useState(true),show=_s[0],setShow=_s[1];
+  if(!show) return null;
+  return <div style={{position:"fixed",inset:0,zIndex:1001,display:"flex",alignItems:"center",justifyContent:"center",padding:20,background:"rgba(0,0,0,.5)",backdropFilter:"blur(4px)"}} onClick={function(){setShow(false)}}>
+    <div style={{position:"relative",background:"#fff",borderRadius:20,padding:"36px 32px",maxWidth:600,width:"100%",boxShadow:"0 24px 80px rgba(0,0,0,.25)",display:"flex",gap:24,alignItems:"center",overflow:"hidden"}} onClick={function(e){e.stopPropagation()}}>
+      <button onClick={function(){setShow(false)}} style={{position:"absolute",top:14,right:14,width:32,height:32,borderRadius:"50%",border:"1px solid "+C.sfD,background:C.sf,cursor:"pointer",fontSize:16,fontWeight:700,color:C.dk,display:"flex",alignItems:"center",justifyContent:"center",lineHeight:1}}>✕</button>
+      <div style={{flex:1,minWidth:0}}>
+        <div style={{display:"inline-flex",alignItems:"center",gap:6,background:C.pri+"10",borderRadius:100,padding:"5px 14px",marginBottom:14}}>
+          <span style={{fontSize:11,fontWeight:700,color:C.pri,letterSpacing:".08em",textTransform:"uppercase"}}>Sponsorship Event</span>
+        </div>
+        <h3 style={{fontFamily:"'Sora',system-ui,sans-serif",fontSize:"clamp(18px,3vw,24px)",fontWeight:800,color:C.dk,lineHeight:1.25,marginBottom:12}}>⚡ Diskon Khusus<br/>Sponsorship Event</h3>
+        <p style={{fontSize:14,color:C.mu,lineHeight:1.7,marginBottom:20}}>Butuh lanyard untuk event organisasi atau komunitas? Kami kasih special price — semakin banyak order semakin murah!</p>
+        <a href={WA_LANYARD} target="_blank" rel="noopener" onClick={function(){setShow(false)}} style={{display:"inline-flex",alignItems:"center",gap:8,background:C.pri,color:"#fff",padding:"11px 22px",borderRadius:10,textDecoration:"none",fontSize:13,fontWeight:700}}><WaIcon s={14} c="#fff"/>Chat Sekarang</a>
+      </div>
+      <div style={{flexShrink:0,width:160,height:180,borderRadius:14,background:C.sf,border:"2px dashed "+C.sfD,display:"flex",alignItems:"center",justifyContent:"center",fontSize:12,color:C.mu,textAlign:"center",padding:8}}>foto<br/>lanyard</div>
+    </div>
   </div>;
 }
 function Sponsorship() {
