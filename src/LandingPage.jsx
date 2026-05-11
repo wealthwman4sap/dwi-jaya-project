@@ -362,10 +362,10 @@ function TopBanner() {
   </div>;
 }
 function Sponsorship() {
-  return <section id="sponsorship" style={{background:"linear-gradient(160deg,#EFF6FF 0%,#DBEAFE 60%,#F0F9FF 100%)",borderTop:"1px solid #BFDBFE"}}>
+  return <section id="sponsorship" style={{background:"linear-gradient(160deg,#1D4ED8 0%,#2563EB 40%,#3B82F6 100%)",borderTop:"none"}}>
     <div style={{maxWidth:800,margin:"0 auto",padding:"100px 24px",textAlign:"center"}}>
-      <h2 style={{fontFamily:"'Sora',system-ui,sans-serif",fontSize:"clamp(22px,3.5vw,34px)",fontWeight:800,color:C.dk,letterSpacing:"-.02em",lineHeight:1.2,marginBottom:12}}>{"💰 PAKET SPONSORSHIP — HARGA LEBIH HEMAT"}</h2>
-      <p style={{fontSize:16,color:C.mu,marginBottom:48,lineHeight:1.7}}>Order untuk event organisasi atau komunitas atau conference?<br/>Dapatkan harga special yang lebih murah!</p>
+      <h2 style={{fontFamily:"'Sora',system-ui,sans-serif",fontSize:"clamp(22px,3.5vw,34px)",fontWeight:800,color:"#fff",letterSpacing:"-.02em",lineHeight:1.2,marginBottom:12}}>{"💰 PAKET SPONSORSHIP — HARGA LEBIH HEMAT"}</h2>
+      <p style={{fontSize:16,color:"rgba(255,255,255,.8)",marginBottom:48,lineHeight:1.7}}>Order untuk event organisasi atau komunitas atau conference?<br/>Dapatkan harga special yang lebih murah!</p>
       <div style={{background:C.lt,border:"1px solid "+C.sfD,borderRadius:16,padding:"40px",marginBottom:40,textAlign:"left",display:"flex",flexDirection:"column",gap:20}}>
         {["Minimum 20 pcs","Harga turun otomatis untuk order lebih banyak","Kualitas premium tetap terjaga"].map(function(item,i){return <div key={i} style={{display:"flex",alignItems:"center",gap:12}}><span style={{fontSize:18,flexShrink:0}}>{"✅"}</span><span style={{fontSize:15,color:C.dk,fontWeight:500}}>{item}</span></div>;})}
         <div style={{height:1,background:C.sfD,margin:"8px 0"}}/>
@@ -373,10 +373,10 @@ function Sponsorship() {
           <p style={{fontSize:13,color:C.mu,fontStyle:"italic"}}>— foto lanyard —</p>
         </div>
       </div>
-      <div style={{background:C.pri+"08",border:"1px solid "+C.pri+"20",borderRadius:14,padding:"24px 28px",marginBottom:36}}>
-        <p style={{fontSize:15,color:C.dk,lineHeight:1.75}}>{"💬 "}<strong>Mau tau harga untuk event kamu?</strong><br/>Chat aja langsung — kami buatkan penawaran spesial!</p>
+      <div style={{background:"rgba(255,255,255,.15)",border:"1px solid rgba(255,255,255,.25)",borderRadius:14,padding:"24px 28px",marginBottom:36}}>
+        <p style={{fontSize:15,color:"#fff",lineHeight:1.75}}>{"💬 "}<strong>Mau tau harga untuk event kamu?</strong><br/>Chat aja langsung — kami buatkan penawaran spesial!</p>
       </div>
-      <a href={WA_LANYARD} target="_blank" rel="noopener" className="hglow" style={{display:"inline-flex",alignItems:"center",justifyContent:"center",gap:8,background:C.pri,color:"#fff",padding:"16px 36px",borderRadius:10,textDecoration:"none",fontSize:15,fontWeight:700}}><WaIcon s={18} c="#fff"/>Minta Penawaran Custom</a>
+      <a href={WA_LANYARD} target="_blank" rel="noopener" className="hglow" style={{display:"inline-flex",alignItems:"center",justifyContent:"center",gap:8,background:"#fff",color:C.pri,padding:"16px 36px",borderRadius:10,textDecoration:"none",fontSize:15,fontWeight:700}}><WaIcon s={18} c={C.pri}/>Minta Penawaran Spesial</a>
     </div>
   </section>;
 }
