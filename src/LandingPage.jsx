@@ -344,41 +344,25 @@ var PROD_IMG_10 = "https://drive.google.com/thumbnail?id=1pgCbVmg2nJ9HZxHNP3jHNW
 }
 
 function Sponsorship() {
-  var tiers=[
-    {name:"Bronze",emoji:"\uD83E\uDD49",min:"50 pcs",color:"#CD7F32",bg:"#FFF8F3"},
-    {name:"Silver",emoji:"\uD83E\uDD48",min:"100 pcs",color:"#64748B",bg:"#F8FAFC",highlight:true},
-    {name:"Gold",emoji:"\uD83E\uDD47",min:"150 pcs",color:"#D4A017",bg:"#FFFBEB"},
-  ];
-  return <section id="sponsorship" style={{background:C.sf,padding:"100px 24px",borderTop:"1px solid "+C.sfD}}>
-    <div style={{maxWidth:900,margin:"0 auto"}}>
-      <div style={{textAlign:"center",marginBottom:60}}>
-        <div style={{display:"flex",justifyContent:"center",gap:8,marginBottom:16,flexWrap:"wrap"}}>
-          <span style={{display:"inline-block",fontSize:12,fontWeight:700,color:C.pri,letterSpacing:".1em",textTransform:"uppercase",background:C.pri+"10",padding:"6px 16px",borderRadius:100}}>Sponsorship Program</span>
-          <span style={{display:"inline-block",fontSize:11,fontWeight:700,color:C.acc,letterSpacing:".06em",background:C.acc+"15",padding:"6px 12px",borderRadius:100,border:"1px solid "+C.acc+"30"}}>Khusus Custom Lanyard & Merch</span>
-        </div>
-        <h2 style={{fontFamily:"'Sora',system-ui,sans-serif",fontSize:"clamp(28px,4vw,42px)",fontWeight:800,color:C.dk,letterSpacing:"-.02em",lineHeight:1.15}}>Harga spesial untuk<br/>event & organisasi Anda</h2>
-        <p style={{fontSize:16,color:C.mu,marginTop:12,maxWidth:580,margin:"12px auto 0"}}>Kami menyediakan beberapa tier sponsorship yang bisa disesuaikan dengan kebutuhan event Anda. Hubungi kami untuk penawaran lengkap.</p>
+  return <section id="sponsorship" style={{background:C.sf,borderTop:"1px solid "+C.sfD}}>
+    <div style={{background:"linear-gradient(135deg,"+C.pri+" 0%,#1a3a6e 100%)",padding:"28px 24px",textAlign:"center"}}>
+      <p style={{fontFamily:"'Sora',system-ui,sans-serif",fontSize:"clamp(16px,2.5vw,20px)",fontWeight:800,color:"#fff",marginBottom:8}}>{"⚡ DISKON KHUSUS SPONSORSHIP EVENT ⚡"}</p>
+      <p style={{fontSize:14,color:"rgba(255,255,255,.8)",marginBottom:20,lineHeight:1.6}}>Butuh lanyard untuk event? Kami kasih special price!<br/>Semakin banyak order = semakin murah per pcs</p>
+      <a href={WA_LANYARD} target="_blank" rel="noopener" className="hglow" style={{display:"inline-flex",alignItems:"center",justifyContent:"center",gap:8,background:C.acc,color:C.dk,padding:"12px 28px",borderRadius:10,textDecoration:"none",fontSize:14,fontWeight:700}}><WaIcon s={16} c={C.dk}/>Chat Sekarang</a>
+    </div>
+    <div style={{maxWidth:680,margin:"0 auto",padding:"72px 24px",textAlign:"center"}}>
+      <h2 style={{fontFamily:"'Sora',system-ui,sans-serif",fontSize:"clamp(22px,3.5vw,34px)",fontWeight:800,color:C.dk,letterSpacing:"-.02em",lineHeight:1.2,marginBottom:12}}>{"💰 PAKET SPONSORSHIP — HARGA LEBIH HEMAT"}</h2>
+      <p style={{fontSize:16,color:C.mu,marginBottom:36,lineHeight:1.7}}>Order untuk event atau conference?<br/>Dapatkan harga special yang lebih murah!</p>
+      <div style={{background:C.lt,border:"1px solid "+C.sfD,borderRadius:16,padding:"32px",marginBottom:28,textAlign:"left",display:"flex",flexDirection:"column",gap:16}}>
+        {["Minimum 20 pcs","Harga turun otomatis untuk order lebih banyak","Kualitas premium tetap terjaga"].map(function(item,i){return <div key={i} style={{display:"flex",alignItems:"center",gap:12}}><span style={{fontSize:18,flexShrink:0}}>{"✅"}</span><span style={{fontSize:15,color:C.dk,fontWeight:500}}>{item}</span></div>;})}
       </div>
-
-      {/* Tier Cards */}
-      <div className="tgrid" style={{display:"grid",gridTemplateColumns:"repeat(3,1fr)",gap:20,marginBottom:40}}>
-        {tiers.map(function(t,i){return <div key={i} className="hlift" style={{position:"relative",background:t.highlight?C.deep:C.lt,border:t.highlight?"2px solid "+C.acc+"40":"1px solid "+C.sfD,borderRadius:16,padding:"36px 28px",display:"flex",flexDirection:"column",alignItems:"center",textAlign:"center"}}>
-          {t.highlight&&<div style={{position:"absolute",top:-12,left:"50%",transform:"translateX(-50%)",background:C.acc,color:C.dk,fontSize:10,fontWeight:800,letterSpacing:".08em",textTransform:"uppercase",padding:"5px 14px",borderRadius:100,whiteSpace:"nowrap"}}>Paling populer</div>}
-          <div style={{fontSize:40,marginBottom:12}}>{t.emoji}</div>
-          <h3 style={{fontFamily:"'Sora',system-ui,sans-serif",fontSize:22,fontWeight:800,color:t.highlight?"#fff":C.dk,marginBottom:6}}>Paket {t.name}</h3>
-          <p style={{fontSize:13,color:t.highlight?"rgba(255,255,255,.5)":C.mu,marginBottom:24}}>Min. order {t.min}</p>
-          <a href={WA_LANYARD} target="_blank" rel="noopener" className="hglow" style={{display:"inline-flex",alignItems:"center",justifyContent:"center",gap:8,padding:"13px 28px",borderRadius:10,textDecoration:"none",fontSize:14,fontWeight:700,background:t.highlight?C.acc:"transparent",color:t.highlight?C.dk:C.pri,border:t.highlight?"none":"1.5px solid "+C.pri+"30",marginTop:"auto",width:"100%"}}><WaIcon s={16} c={t.highlight?C.dk:C.pri}/>Tanya detail</a>
-        </div>})}
+      <div style={{background:C.pri+"08",border:"1px solid "+C.pri+"20",borderRadius:14,padding:"24px 28px",marginBottom:32}}>
+        <p style={{fontSize:15,color:C.dk,lineHeight:1.75}}>{"💬 "}<strong>Mau tau harga untuk event kamu?</strong><br/>Chat aja langsung — kami bikinin penawaran custom!</p>
       </div>
-
-      <div style={{padding:"24px 28px",borderRadius:14,background:C.lt,border:"1px solid "+C.sfD,textAlign:"center"}}>
-        <p style={{fontSize:15,color:C.mu,lineHeight:1.7}}>Setiap tier punya benefit dan harga yang berbeda. <strong style={{color:C.dk}}>Chat kami via WhatsApp</strong> untuk penjelasan lengkap dan penawaran yang sesuai kebutuhan event Anda.</p>
-        <a href={WA_LANYARD} target="_blank" rel="noopener" className="hglow" style={{display:"inline-flex",alignItems:"center",justifyContent:"center",gap:8,marginTop:16,background:C.pri,color:"#fff",padding:"14px 32px",borderRadius:10,textDecoration:"none",fontSize:14,fontWeight:700}}><WaIcon s={16} c="#fff"/>Hubungi Kami Sekarang</a>
-      </div>
+      <a href={WA_LANYARD} target="_blank" rel="noopener" className="hglow" style={{display:"inline-flex",alignItems:"center",justifyContent:"center",gap:8,background:C.pri,color:"#fff",padding:"16px 36px",borderRadius:10,textDecoration:"none",fontSize:15,fontWeight:700}}><WaIcon s={18} c="#fff"/>Minta Penawaran Custom</a>
     </div>
   </section>;
 }
-
 function HowWeWork() {
   var st=[
     {n:"01",t:"Hubungi kami",d:"Chat WhatsApp ke admin yang sesuai (lanyard/merch atau print/jilid). Ceritakan kebutuhan Anda."},
