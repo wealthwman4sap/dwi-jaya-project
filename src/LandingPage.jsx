@@ -354,7 +354,7 @@ function TopBanner() {
           <span style={{fontSize:11,fontWeight:700,color:C.pri,letterSpacing:".08em",textTransform:"uppercase"}}>Sponsorship Event</span>
         </div>
         <h3 style={{fontFamily:"'Sora',system-ui,sans-serif",fontSize:"clamp(18px,3vw,24px)",fontWeight:800,color:C.dk,lineHeight:1.25,marginBottom:12}}>⚡ Diskon Khusus<br/>Sponsorship Event</h3>
-        <p style={{fontSize:14,color:C.mu,lineHeight:1.7,marginBottom:20}}>Butuh lanyard untuk event organisasi atau komunitas? Kami kasih special price — semakin banyak order semakin murah!</p>
+        <p style={{fontSize:14,color:"#475569",lineHeight:1.7,marginBottom:20}}>Butuh <strong>lanyard id card</strong> untuk event organisasi atau komunitas? Kami kasih special price — semakin banyak order semakin murah!</p>
         <a href={WA_LANYARD} target="_blank" rel="noopener" onClick={function(){setShow(false)}} style={{display:"inline-flex",alignItems:"center",gap:8,background:C.pri,color:"#fff",padding:"11px 22px",borderRadius:10,textDecoration:"none",fontSize:13,fontWeight:700}}><WaIcon s={14} c="#fff"/>Chat Sekarang</a>
       </div>
       <div style={{flexShrink:0,width:160,height:180,borderRadius:14,background:C.sf,border:"2px dashed "+C.sfD,display:"flex",alignItems:"center",justifyContent:"center",fontSize:12,color:C.mu,textAlign:"center",padding:8}}>foto<br/>lanyard</div>
@@ -362,7 +362,7 @@ function TopBanner() {
   </div>;
 }
 function Sponsorship() {
-  return <section id="sponsorship" style={{background:C.sf,borderTop:"1px solid "+C.sfD}}>
+  return <section id="sponsorship" style={{background:"linear-gradient(160deg,#EFF6FF 0%,#DBEAFE 60%,#F0F9FF 100%)",borderTop:"1px solid #BFDBFE"}}>
     <div style={{maxWidth:800,margin:"0 auto",padding:"100px 24px",textAlign:"center"}}>
       <h2 style={{fontFamily:"'Sora',system-ui,sans-serif",fontSize:"clamp(22px,3.5vw,34px)",fontWeight:800,color:C.dk,letterSpacing:"-.02em",lineHeight:1.2,marginBottom:12}}>{"💰 PAKET SPONSORSHIP — HARGA LEBIH HEMAT"}</h2>
       <p style={{fontSize:16,color:C.mu,marginBottom:48,lineHeight:1.7}}>Order untuk event organisasi atau komunitas atau conference?<br/>Dapatkan harga special yang lebih murah!</p>
@@ -374,7 +374,7 @@ function Sponsorship() {
         </div>
       </div>
       <div style={{background:C.pri+"08",border:"1px solid "+C.pri+"20",borderRadius:14,padding:"24px 28px",marginBottom:36}}>
-        <p style={{fontSize:15,color:C.dk,lineHeight:1.75}}>{"💬 "}<strong>Mau tau harga untuk event kamu?</strong><br/>Chat aja langsung — kami bikinin penawaran custom!</p>
+        <p style={{fontSize:15,color:C.dk,lineHeight:1.75}}>{"💬 "}<strong>Mau tau harga untuk event kamu?</strong><br/>Chat aja langsung — kami buatkan penawaran spesial!</p>
       </div>
       <a href={WA_LANYARD} target="_blank" rel="noopener" className="hglow" style={{display:"inline-flex",alignItems:"center",justifyContent:"center",gap:8,background:C.pri,color:"#fff",padding:"16px 36px",borderRadius:10,textDecoration:"none",fontSize:15,fontWeight:700}}><WaIcon s={18} c="#fff"/>Minta Penawaran Custom</a>
     </div>
@@ -583,20 +583,6 @@ function FloatingWA() {
   </div>;
 }
 
-function StickyBar() {
-  var _a=useState(false),show=_a[0],setShow=_a[1];
-  useEffect(function(){var h=function(){var pct=window.scrollY/(document.documentElement.scrollHeight-window.innerHeight);setShow(pct>0.35)};window.addEventListener("scroll",h);return function(){window.removeEventListener("scroll",h)}},[]);
-  if(!show) return null;
-  return <div className="sticky-b" style={{position:"fixed",bottom:0,left:0,right:0,zIndex:998,background:"rgba(255,255,255,.95)",backdropFilter:"blur(12px)",borderTop:"1px solid "+C.sfD,padding:"10px 24px",animation:"slideUp .3s ease",display:"flex",alignItems:"center",justifyContent:"center",gap:12,flexWrap:"wrap"}}>
-    <span className="sb-lbl" style={{fontSize:14,fontWeight:600,color:C.dk}}>Butuh bantuan memilih?</span>
-    <a href={WA_LANYARD} target="_blank" rel="noopener" style={{display:"inline-flex",alignItems:"center",gap:6,background:C.pri,color:"#fff",padding:"8px 18px",borderRadius:8,textDecoration:"none",fontSize:13,fontWeight:700}}>
-      <WaIcon c="#fff" s={14}/> Lanyard & Merch
-    </a>
-    <a href={WA_PRINT} target="_blank" rel="noopener" style={{display:"inline-flex",alignItems:"center",gap:6,background:C.sl,color:"#fff",padding:"8px 18px",borderRadius:8,textDecoration:"none",fontSize:13,fontWeight:700}}>
-      <WaIcon c="#fff" s={14}/> Print & Jilid
-    </a>
-  </div>;
-}
 
 export default function LandingPage() {
   return <div style={{fontFamily:"'Sora',-apple-system,'Segoe UI',system-ui,sans-serif",color:C.dk,lineHeight:1.6,margin:0}}>
@@ -615,6 +601,5 @@ export default function LandingPage() {
     <CTA/>
     <Footer/>
     <FloatingWA/>
-    <StickyBar/>
   </div>;
 }
