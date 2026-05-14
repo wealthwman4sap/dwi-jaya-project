@@ -279,7 +279,7 @@ function ForWhom() {
 
 function WhatWeOffer() {
   var _a=useState("semua"),at=_a[0],setAt=_a[1];
-var PROD_IMG_1 = "/lanyard-section.png";
+var PROD_IMG_1 = "/lanyard-popup.png";
 var PROD_IMG_2 = "https://drive.google.com/thumbnail?id=1XySCh0mRVWkqixbaOHEPzQ-zZ7BjXq2h&sz=w800";
 var PROD_IMG_3 = "https://drive.google.com/thumbnail?id=11K1TZ9-J2eylhIbqZ3AEETj4xDs0SLvz&sz=w800";
 var PROD_IMG_4 = "https://drive.google.com/thumbnail?id=1J6zq9qxEm9kotMYJfkd-dxf0cq_1oGTP&sz=w800";
@@ -291,7 +291,7 @@ var PROD_IMG_9 = "https://drive.google.com/thumbnail?id=1j948xcHKHza4Q-ztKBZH6zY
 var PROD_IMG_10 = "https://drive.google.com/thumbnail?id=1pgCbVmg2nJ9HZxHNP3jHNW6Gbbr0xqqQ&sz=w800";
   var cats=[{id:"semua",l:"Semua"},{id:"merchandise",l:"Lanyard & Merch"},{id:"cetak",l:"Print dan Jilid"}];
   var pj=[
-    {id:1,cat:"merchandise",img:PROD_IMG_1,title:"ID Card + Lanyard Set",sub:"Newly Added",desc:"Set ID card PVC + lanyard tissue full-print. Custom desain sesuai kebutuhan.",tags:["PVC Card","Lanyard Sublim","Custom"],newly:true},
+    {id:1,cat:"merchandise",img:PROD_IMG_1,fit:"contain",title:"ID Card + Lanyard Set",sub:"Newly Added",desc:"Set ID card PVC + lanyard tissue full-print. Custom desain sesuai kebutuhan.",tags:["PVC Card","Lanyard Sublim","Custom"],newly:true},
     {id:2,cat:"merchandise",img:PROD_IMG_2,title:"Wristband Event",sub:"Newly Added",desc:"Wristband tyvek & tissue untuk konser, festival, dan gathering berskala besar.",tags:["Tyvek","Tissue","Custom"],newly:true},
     {id:3,cat:"merchandise",img:PROD_IMG_3,title:"ID Card Karyawan & Visitor",sub:"Newly Added",desc:"ID card PVC untuk identitas karyawan, visitor, dan event internal.",tags:["PVC Card","Cetak Massal","Custom"],newly:true},
     {id:4,cat:"merchandise",img:PROD_IMG_4,title:"Keychain Custom",sub:"Newly Added",desc:"Gantungan kunci bahan tissue dengan print sublim full color untuk merchandise dan souvenir.",tags:["Bahan Tissue","Sublim Print","Custom"],newly:true},
@@ -314,7 +314,7 @@ var PROD_IMG_10 = "https://drive.google.com/thumbnail?id=1pgCbVmg2nJ9HZxHNP3jHNW
       <div className="pgrid" style={{display:"grid",gridTemplateColumns:"repeat(auto-fill,minmax(320px,1fr))",gap:24}}>
         {fi.map(function(p){return <div key={p.id} className="pcard" style={{borderRadius:16,overflow:"hidden",border:"1px solid "+C.sfD,background:C.lt}}>
           <div style={{height:220,overflow:"hidden",position:"relative",background:p.img?"transparent":"linear-gradient(135deg,"+C.pri+"12 0%,"+C.acc+"08 100%)"}}>
-            {p.img?<img className="pimg" src={p.img} alt={p.title} style={{width:"100%",height:"100%",objectFit:"cover",display:"block"}}/>:
+            {p.img?<img className="pimg" src={p.img} alt={p.title} style={{width:"100%",height:"100%",objectFit:p.fit||"cover",display:"block"}}/>:
             <div style={{width:"100%",height:"100%",display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center",gap:12}}>
               <div style={{width:64,height:64,borderRadius:14,background:C.pri+"10",border:"2px dashed "+C.pri+"25",display:"flex",alignItems:"center",justifyContent:"center"}}>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke={C.pri} strokeWidth="1.5" strokeLinecap="round"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
@@ -370,8 +370,8 @@ function Sponsorship() {
       <div style={{background:C.lt,border:"1px solid "+C.sfD,borderRadius:16,padding:"40px",marginBottom:40,textAlign:"left",display:"flex",flexDirection:"column",gap:20}}>
         {["Minimum 20 pcs","Harga turun otomatis untuk order lebih banyak","Kualitas premium tetap terjaga"].map(function(item,i){return <div key={i} style={{display:"flex",alignItems:"center",gap:12}}><span style={{fontSize:18,flexShrink:0}}>{"✅"}</span><span style={{fontSize:15,color:C.dk,fontWeight:500}}>{item}</span></div>;})}
         <div style={{height:1,background:C.sfD,margin:"8px 0"}}/>
-        <div style={{borderRadius:12,overflow:"hidden",display:"flex",alignItems:"center",justifyContent:"center"}}>
-          <img src="/lanyard-section.png" alt="Lanyard ID Card" style={{width:"100%",height:"auto",display:"block",objectFit:"contain"}}/>
+        <div style={{borderRadius:12,overflow:"hidden",height:220}}>
+          <img src="/lanyard-horizontal.png" alt="Lanyard ID Card" style={{width:"100%",height:"100%",objectFit:"cover",objectPosition:"center center",display:"block"}}/>
         </div>
       </div>
       <div style={{background:"rgba(255,255,255,.15)",border:"1px solid rgba(255,255,255,.25)",borderRadius:14,padding:"24px 28px",marginBottom:36}}>
