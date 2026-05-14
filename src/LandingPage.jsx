@@ -356,8 +356,8 @@ function TopBanner() {
         <p style={{fontSize:14,color:"#475569",lineHeight:1.7,marginBottom:20}}>Butuh <strong>lanyard id card</strong> untuk event organisasi atau komunitas? Kami kasih special price — semakin banyak order semakin murah!</p>
         <a href={WA_LANYARD} target="_blank" rel="noopener" onClick={function(){setShow(false)}} style={{display:"inline-flex",alignItems:"center",gap:8,background:C.pri,color:"#fff",padding:"11px 22px",borderRadius:10,textDecoration:"none",fontSize:13,fontWeight:700}}><WaIcon s={14} c="#fff"/>Chat Sekarang</a>
       </div>
-      <div className="popup-img" style={{flexShrink:0,width:170,borderRadius:14,overflow:"hidden"}}>
-        <img src="/lanyard-popup.png" alt="Lanyard ID Card" style={{width:"100%",height:"auto",display:"block"}}/>
+      <div className="popup-img" style={{flexShrink:0,width:190,borderRadius:14,overflow:"hidden",background:"#0b0b0f",display:"flex",alignItems:"center",justifyContent:"center",alignSelf:"stretch"}}>
+        <img src="/lanyard-popup.png" alt="Lanyard ID Card" style={{width:"100%",height:"100%",objectFit:"contain",display:"block"}}/>
       </div>
     </div>
   </div>;
