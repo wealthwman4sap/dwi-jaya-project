@@ -370,8 +370,8 @@ function Sponsorship() {
       <div style={{background:C.lt,border:"1px solid "+C.sfD,borderRadius:16,padding:"40px",marginBottom:40,textAlign:"left",display:"flex",flexDirection:"column",gap:20}}>
         {["Minimum 20 pcs","Harga turun otomatis untuk order lebih banyak","Kualitas premium tetap terjaga"].map(function(item,i){return <div key={i} style={{display:"flex",alignItems:"center",gap:12}}><span style={{fontSize:18,flexShrink:0}}>{"✅"}</span><span style={{fontSize:15,color:C.dk,fontWeight:500}}>{item}</span></div>;})}
         <div style={{height:1,background:C.sfD,margin:"8px 0"}}/>
-        <div style={{minHeight:220,borderRadius:12,background:C.sf,border:"2px dashed "+C.sfD,display:"flex",alignItems:"center",justifyContent:"center"}}>
-          <p style={{fontSize:13,color:C.mu,fontStyle:"italic"}}>— foto lanyard —</p>
+        <div style={{borderRadius:12,overflow:"hidden",maxHeight:280}}>
+          <img src="/lanyard-popup.png" alt="Lanyard ID Card" style={{width:"100%",height:"280px",objectFit:"cover",objectPosition:"center 30%",display:"block"}}/>
         </div>
       </div>
       <div style={{background:"rgba(255,255,255,.15)",border:"1px solid rgba(255,255,255,.25)",borderRadius:14,padding:"24px 28px",marginBottom:36}}>
