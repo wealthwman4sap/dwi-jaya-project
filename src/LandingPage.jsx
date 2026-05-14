@@ -370,8 +370,8 @@ function Sponsorship() {
       <div style={{background:C.lt,border:"1px solid "+C.sfD,borderRadius:16,padding:"40px",marginBottom:40,textAlign:"left",display:"flex",flexDirection:"column",gap:20}}>
         {["Minimum 20 pcs","Harga turun otomatis untuk order lebih banyak","Kualitas premium tetap terjaga"].map(function(item,i){return <div key={i} style={{display:"flex",alignItems:"center",gap:12}}><span style={{fontSize:18,flexShrink:0}}>{"✅"}</span><span style={{fontSize:15,color:C.dk,fontWeight:500}}>{item}</span></div>;})}
         <div style={{height:1,background:C.sfD,margin:"8px 0"}}/>
-        <div style={{borderRadius:12,overflow:"hidden",height:220}}>
-          <img src="/lanyard-horizontal.png" alt="Lanyard ID Card" style={{width:"100%",height:"100%",objectFit:"cover",objectPosition:"center center",display:"block"}}/>
+        <div style={{borderRadius:12,overflow:"hidden"}}>
+          <img src="/lanyard-horizontal.png" alt="Lanyard ID Card" style={{width:"100%",height:"auto",display:"block"}}/>
         </div>
       </div>
       <div style={{background:"rgba(255,255,255,.15)",border:"1px solid rgba(255,255,255,.25)",borderRadius:14,padding:"24px 28px",marginBottom:36}}>
