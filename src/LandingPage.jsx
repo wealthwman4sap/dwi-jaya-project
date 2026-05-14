@@ -45,7 +45,7 @@ function GlobalStyles() {
     .marquee-r{display:flex;gap:48px;align-items:center;animation:marquee 35s linear infinite reverse;width:max-content}.marquee-r:hover{animation-play-state:paused}
     .farrow{stroke-dasharray:6 4;animation:arrowFlow 2.5s ease-in-out infinite}
     .tab-b{transition:all .25s;cursor:pointer}.tab-b:hover{background:${C.pri}10}
-    @media(max-width:768px){.nav-l{display:none!important}.hero-s{flex-direction:column;gap:20px!important}.foot-g{grid-template-columns:1fr!important;gap:32px!important}.hgrid{grid-template-columns:1fr!important}.pgrid{grid-template-columns:1fr!important}.tgrid{grid-template-columns:1fr!important}.agrid{grid-template-columns:1fr!important}.hcta{flex-direction:column!important;align-items:stretch!important}.sgrid{grid-template-columns:1fr!important}.fa-c{display:none!important}.lgrid{grid-template-columns:1fr!important}.sticky-b .sb-lbl{display:none}.popup-img{display:none!important}}
+    @media(max-width:768px){.nav-l{display:none!important}.hero-s{flex-direction:column;gap:20px!important}.foot-g{grid-template-columns:1fr!important;gap:32px!important}.hgrid{grid-template-columns:1fr!important}.pgrid{grid-template-columns:1fr!important}.tgrid{grid-template-columns:1fr!important}.agrid{grid-template-columns:1fr!important}.hcta{flex-direction:column!important;align-items:stretch!important}.sgrid{grid-template-columns:1fr!important}.fa-c{display:none!important}.lgrid{grid-template-columns:1fr!important}.sticky-b .sb-lbl{display:none}.popup-box{flex-direction:column-reverse!important;padding:20px 20px 24px!important;gap:0!important}.popup-img{width:100%!important;height:160px!important;border-radius:0 0 12px 12px!important;margin-bottom:16px}.popup-img img{height:160px!important;width:100%!important;object-fit:cover!important;object-position:center 25%!important}}
   `}} />;
 }
 
@@ -346,7 +346,7 @@ function TopBanner() {
   var _s=useState(true),show=_s[0],setShow=_s[1];
   if(!show) return null;
   return <div style={{position:"fixed",inset:0,zIndex:1001,display:"flex",alignItems:"center",justifyContent:"center",padding:20,background:"rgba(0,0,0,.5)",backdropFilter:"blur(4px)"}} onClick={function(){setShow(false)}}>
-    <div style={{position:"relative",background:"#fff",borderRadius:20,padding:"36px 32px",maxWidth:600,width:"100%",boxShadow:"0 24px 80px rgba(0,0,0,.25)",display:"flex",gap:24,alignItems:"center",overflow:"hidden"}} onClick={function(e){e.stopPropagation()}}>
+    <div className="popup-box" style={{position:"relative",background:"#fff",borderRadius:20,padding:"36px 32px",maxWidth:600,width:"100%",boxShadow:"0 24px 80px rgba(0,0,0,.25)",display:"flex",gap:24,alignItems:"center",overflow:"hidden"}} onClick={function(e){e.stopPropagation()}}>
       <button onClick={function(){setShow(false)}} style={{position:"absolute",top:14,right:14,width:32,height:32,borderRadius:"50%",border:"1px solid "+C.sfD,background:C.sf,cursor:"pointer",fontSize:16,fontWeight:700,color:C.dk,display:"flex",alignItems:"center",justifyContent:"center",lineHeight:1}}>✕</button>
       <div style={{flex:1,minWidth:0}}>
         <div style={{display:"inline-flex",alignItems:"center",gap:6,background:C.pri+"10",borderRadius:100,padding:"5px 14px",marginBottom:14}}>
