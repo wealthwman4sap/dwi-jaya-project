@@ -45,7 +45,7 @@ function GlobalStyles() {
     .marquee-r{display:flex;gap:48px;align-items:center;animation:marquee 35s linear infinite reverse;width:max-content}.marquee-r:hover{animation-play-state:paused}
     .farrow{stroke-dasharray:6 4;animation:arrowFlow 2.5s ease-in-out infinite}
     .tab-b{transition:all .25s;cursor:pointer}.tab-b:hover{background:${C.pri}10}
-    @media(max-width:768px){.nav-l{display:none!important}.hero-s{flex-direction:column;gap:20px!important}.foot-g{grid-template-columns:1fr!important;gap:32px!important}.hgrid{grid-template-columns:1fr!important}.pgrid{grid-template-columns:1fr!important}.tgrid{grid-template-columns:1fr!important}.agrid{grid-template-columns:1fr!important}.hcta{flex-direction:column!important;align-items:stretch!important}.sgrid{grid-template-columns:1fr!important}.fa-c{display:none!important}.lgrid{grid-template-columns:1fr!important}.sticky-b .sb-lbl{display:none}.popup-box{flex-direction:column-reverse!important;padding:20px 20px 24px!important;gap:0!important}.popup-img{width:100%!important;height:160px!important;border-radius:0 0 12px 12px!important;margin-bottom:16px}.popup-img img{height:160px!important;width:100%!important;object-fit:cover!important;object-position:center 25%!important}}
+    @media(max-width:768px){.nav-l{display:none!important}.hero-s{flex-direction:column;gap:20px!important}.foot-g{grid-template-columns:1fr!important;gap:32px!important}.hgrid{grid-template-columns:1fr!important}.pgrid{grid-template-columns:1fr!important}.tgrid{grid-template-columns:1fr!important}.agrid{grid-template-columns:1fr!important}.hcta{flex-direction:column!important;align-items:stretch!important}.sgrid{grid-template-columns:1fr!important}.fa-c{display:none!important}.lgrid{grid-template-columns:1fr!important}.sticky-b .sb-lbl{display:none}.popup-box{flex-direction:column!important;align-items:center!important;padding:24px 20px!important;gap:16px!important}.popup-img{width:160px!important}.popup-img img{height:auto!important}}
   `}} />;
 }
 
@@ -356,8 +356,8 @@ function TopBanner() {
         <p style={{fontSize:14,color:"#475569",lineHeight:1.7,marginBottom:20}}>Butuh <strong>lanyard id card</strong> untuk event organisasi atau komunitas? Kami kasih special price — semakin banyak order semakin murah!</p>
         <a href={WA_LANYARD} target="_blank" rel="noopener" onClick={function(){setShow(false)}} style={{display:"inline-flex",alignItems:"center",gap:8,background:C.pri,color:"#fff",padding:"11px 22px",borderRadius:10,textDecoration:"none",fontSize:13,fontWeight:700}}><WaIcon s={14} c="#fff"/>Chat Sekarang</a>
       </div>
-      <div className="popup-img" style={{flexShrink:0,width:190,borderRadius:14,overflow:"hidden",background:"#0b0b0f",display:"flex",alignItems:"center",justifyContent:"center",alignSelf:"stretch"}}>
-        <img src="/lanyard-popup.png" alt="Lanyard ID Card" style={{width:"100%",height:"100%",objectFit:"contain",display:"block"}}/>
+      <div className="popup-img" style={{flexShrink:0,width:170,borderRadius:14,overflow:"hidden"}}>
+        <img src="/lanyard-popup.png" alt="Lanyard ID Card" style={{width:"100%",height:"auto",display:"block"}}/>
       </div>
     </div>
   </div>;
