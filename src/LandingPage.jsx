@@ -279,7 +279,7 @@ function ForWhom() {
 
 function WhatWeOffer() {
   var _a=useState("semua"),at=_a[0],setAt=_a[1];
-var PROD_IMG_1 = "https://drive.google.com/thumbnail?id=1j_SV8Ga5CTo9rZe-vbEdrINUK2pG3oqz&sz=w800";
+var PROD_IMG_1 = "/lanyard-section.png";
 var PROD_IMG_2 = "https://drive.google.com/thumbnail?id=1XySCh0mRVWkqixbaOHEPzQ-zZ7BjXq2h&sz=w800";
 var PROD_IMG_3 = "https://drive.google.com/thumbnail?id=11K1TZ9-J2eylhIbqZ3AEETj4xDs0SLvz&sz=w800";
 var PROD_IMG_4 = "https://drive.google.com/thumbnail?id=1J6zq9qxEm9kotMYJfkd-dxf0cq_1oGTP&sz=w800";
@@ -366,12 +366,12 @@ function Sponsorship() {
   return <section id="sponsorship" style={{background:"linear-gradient(160deg,#1D4ED8 0%,#2563EB 40%,#3B82F6 100%)",borderTop:"none"}}>
     <div style={{maxWidth:800,margin:"0 auto",padding:"100px 24px",textAlign:"center"}}>
       <h2 style={{fontFamily:"'Sora',system-ui,sans-serif",fontSize:"clamp(22px,3.5vw,34px)",fontWeight:800,color:"#fff",letterSpacing:"-.02em",lineHeight:1.2,marginBottom:12}}>{"💰 PAKET SPONSORSHIP — HARGA LEBIH HEMAT"}</h2>
-      <p style={{fontSize:16,color:"rgba(255,255,255,.8)",marginBottom:48,lineHeight:1.7}}>Order untuk event organisasi atau komunitas atau conference?<br/>Dapatkan harga special yang lebih murah!</p>
+      <p style={{fontSize:16,color:"rgba(255,255,255,.8)",marginBottom:48,lineHeight:1.7}}>Order untuk event organisasi, kampus, atau perusahaan?<br/>Dapatkan harga special yang lebih murah!</p>
       <div style={{background:C.lt,border:"1px solid "+C.sfD,borderRadius:16,padding:"40px",marginBottom:40,textAlign:"left",display:"flex",flexDirection:"column",gap:20}}>
         {["Minimum 20 pcs","Harga turun otomatis untuk order lebih banyak","Kualitas premium tetap terjaga"].map(function(item,i){return <div key={i} style={{display:"flex",alignItems:"center",gap:12}}><span style={{fontSize:18,flexShrink:0}}>{"✅"}</span><span style={{fontSize:15,color:C.dk,fontWeight:500}}>{item}</span></div>;})}
         <div style={{height:1,background:C.sfD,margin:"8px 0"}}/>
-        <div style={{borderRadius:12,overflow:"hidden",maxHeight:280}}>
-          <img src="/lanyard-popup.png" alt="Lanyard ID Card" style={{width:"100%",height:"280px",objectFit:"cover",objectPosition:"center 30%",display:"block"}}/>
+        <div style={{borderRadius:12,overflow:"hidden",display:"flex",alignItems:"center",justifyContent:"center"}}>
+          <img src="/lanyard-section.png" alt="Lanyard ID Card" style={{width:"100%",height:"auto",display:"block",objectFit:"contain"}}/>
         </div>
       </div>
       <div style={{background:"rgba(255,255,255,.15)",border:"1px solid rgba(255,255,255,.25)",borderRadius:14,padding:"24px 28px",marginBottom:36}}>
